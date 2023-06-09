@@ -45,3 +45,4 @@ uigou
 jb
 lmblj
 konti na laaaaaang!
+attempt: readme with python file
