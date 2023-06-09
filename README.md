@@ -1,3 +1,5 @@
+[![Coverage](https://img.shields.io/badge/coverage-<coverage_percentage>%-<color>?style=flat-square)](coverage_report_url)
+
 ## How to run the tests
 
 Install the requirements.txt first:
