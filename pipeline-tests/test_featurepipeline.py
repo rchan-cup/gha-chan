@@ -1,4 +1,4 @@
-#from pipeline import feature_pipeline
+from pipeline import feature_pipeline
 from unittest import TestCase
 import pytest
 
