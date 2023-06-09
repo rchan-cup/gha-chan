@@ -47,7 +47,7 @@ jobs:
         #path: coverage.xml
     
     - name: Run tests with code coverage
-      run: pytest --cov=features --cov=pipeline --junitxml=pytest.xml --cov-report=term-missing:skip-covered
+      run: pytest --cov=features --cov=pipeline --junitxml=pytest.xml --cov-report=term-missing:skip-covered | tee pytest-coverage.txt
       
     - name: Pytest coverage comment
       id: coverageComment
