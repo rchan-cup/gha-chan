@@ -1,6 +1,5 @@
 from features import ip_features as ipf
 from unittest import TestCase
-import hsfs
 import time
 import pytest
 from contextlib import nullcontext as does_not_raise
