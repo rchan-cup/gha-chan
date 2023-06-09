@@ -12,7 +12,7 @@ with open('README.md', 'r') as file:
 #print "Your name: " + data[0]
 
 # now change the 2nd line, note that you have to add a newline
-data[0] = '![coverage](https://img.shields.io/static/v1?label=coverage&message='+a+'25&color='+b+'orange&logo=python)<br/><br/>'
+data[0] = '![coverage](https://img.shields.io/static/v1?label=coverage&message='+a+'25&color='+b+'orange&logo=python)\n\n'
 
 # and write everything back
 with open('README.md', 'w') as file:
