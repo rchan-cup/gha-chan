@@ -47,7 +47,7 @@ jobs:
         #path: coverage.xml
     
     - name: Run tests with code coverage
-      run: pytest --cov
+      run: pytest --cov=features --cov=pipeline
 
     - name: Upload code coverage results
       uses: codecov/codecov-action@v2
