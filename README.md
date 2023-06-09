@@ -1,4 +1,4 @@
-[![Coverage](https://img.shields.io/badge/coverage-0%-brightgreen?style=flat-square)](https://img.shields.io/badge/coverage-0%25-brightgreen)
+[!Coverage][https://img.shields.io/badge/coverage-0%25-brightgreen]
 
 ## How to run the tests
 
