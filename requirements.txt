@@ -2,3 +2,4 @@ ip2geotools
 requests
 python-geoip-geolite2
 python-geoip-python3
+nbformat
