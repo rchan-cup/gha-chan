@@ -113,8 +113,14 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config user.name "rchan-cup"
-        git config user.email "rose.chan@cambridge.org"
+        git config --global user.name "rchan-cup"
+        git config --global user.email "rose.chan@cambridge.org"
         git add README.md
         git commit -m "Update README with workflow"
-        git push
+        #git push
+      
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT_SECRET }}
+        branch: ${{ github.ref }}
