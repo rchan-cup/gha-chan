@@ -43,6 +43,13 @@ jobs:
         name: coverage-report
         path: coverage.xml
         
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT_SECRET }}
+        branch: refs/pull/42/merge
+        directory: .
+        
     - name: update file and push to remote
       run: |
         echo "Test push commit to the remote in the workflow" >> test.txt
