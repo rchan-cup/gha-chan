@@ -47,13 +47,8 @@ jobs:
         #path: coverage.xml
     
     - name: Run tests with code coverage
-      run: pytest --cov=features --cov=pipeline --cov-report xml:/home/runner/work/gha-chan/gha-chan/coverage.xml
+      run: pytest --cov=features --cov=pipeline --cov-report xml:coverage.xml
 
-    - name: Upload code coverage results
-      uses: codecov/codecov-action@v2
-      with:
-        file: /home/runner/work/gha-chan/gha-chan/coverage.xml
-        
     - name: update file and push to remote
       run: |
         echo "Test push commit to the remote in the workflow" >> test.txt
