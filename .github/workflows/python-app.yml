@@ -36,17 +36,5 @@ jobs:
     - name: Upload coverage report
       uses: actions/upload-artifact@v2
       with:
-        name: coverage
-        path: coverage
-
-    - name: Set up coverage badge
-      run: |
-        pip install coverage-badge
-        coverage-badge -o coverage/coverage.svg -f
-        mv coverage/coverage.svg coverage.svg
-
-    - name: Publish coverage badge
-      uses: actions/upload-artifact@v2
-      with:
-        name: coverage-badge
-        path: coverage.svg
+        name: coverage-report
+        path: coverage.xml
