@@ -10,3 +10,4 @@ nbconvert not found
 REMOVING NOTEBOOKTEST FOR NOW
 aaaaaarrrghhhH!
 specify few folders for coverage
+renamed tests
