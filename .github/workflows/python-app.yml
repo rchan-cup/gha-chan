@@ -58,8 +58,11 @@ jobs:
       id: coverageComment
       uses: MishaKav/pytest-coverage-comment@main
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         pytest-coverage-path: pytest-coverage.txt
         junitxml-path: pytest.xml
+        hide-report: true
+        
 
     - name: Check the output coverage
       run: |
