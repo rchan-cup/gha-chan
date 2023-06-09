@@ -23,6 +23,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
       with:
@@ -43,13 +46,6 @@ jobs:
         name: coverage-report
         path: coverage.xml
         
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.PAT_SECRET }}
-        branch: refs/pull/42/merge
-        directory: .
-        
     - name: update file and push to remote
       run: |
         echo "Test push commit to the remote in the workflow" >> test.txt
@@ -58,4 +54,9 @@ jobs:
 
         git add -A
         git commit -m "Update test.txt"
-        git push
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PAT_SECRET }}
+        branch: ${{ github.ref }}
