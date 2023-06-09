@@ -1,0 +1,15 @@
+.                                                                        [100%]
+------ generated xml file: /home/runner/work/gha-chan/gha-chan/pytest.xml ------
+
+---------- coverage: platform linux, python 3.11.3-final-0 -----------
+Name                           Stmts   Miss  Cover   Missing
+------------------------------------------------------------
+features/date_transform.py         4      4     0%   1-11
+features/ip_features.py           17     10    41%   12, 22, 32-33, 48-53
+pipeline/feature_pipeline.py      10      1    90%   37
+------------------------------------------------------------
+TOTAL                             31     15    52%
+
+2 files skipped due to complete coverage.
+
+1 passed in 0.95s
