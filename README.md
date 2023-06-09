@@ -1,5 +1,4 @@
-![coverage](https://img.shields.io/static/v1?label=coverage&message=52%25&color=orangeorange&logo=python])<br/><br/>
-## How to run the tests
+![coverage](https://img.shields.io/static/v1?label=coverage&message=52%25&color=orangeorange&logo=python)<br/><br/>## How to run the tests
 
 Install the requirements.txt first:
 
