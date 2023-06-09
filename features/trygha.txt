@@ -6,3 +6,4 @@ add store credentioals false and push commit via pat
 trying code coverage (python lib: coverage)
 tried pytest . --cov=.
 nbformat not found
+nbconvert not found
