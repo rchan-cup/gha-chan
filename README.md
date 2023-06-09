@@ -1,4 +1,4 @@
-[![Coverage](https://img.shields.io/badge/coverage-<coverage_percentage>%-<color>?style=flat-square)](coverage_report_url)
+[![Coverage](https://img.shields.io/badge/coverage-<coverage_percentage>%-<color>?style=flat-square)](https://img.shields.io/badge/coverage-0%25-brightgreen)
 
 ## How to run the tests
 
