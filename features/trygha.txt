@@ -7,3 +7,4 @@ trying code coverage (python lib: coverage)
 tried pytest . --cov=.
 nbformat not found
 nbconvert not found
+REMOVING NOTEBOOKTEST FOR NOW
