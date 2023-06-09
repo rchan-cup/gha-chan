@@ -1,4 +1,8 @@
-![coverage](https://img.shields.io/static/v1?label=coverage&message=52%25&color=orangeorange&logo=python)<br/><br/>
+![coverage](https://img.shields.io/static/v1?label=coverage&message=52%25&color=orangeorange&logo=python)
+
+
+##How to Test
+
 Install the requirements.txt first:
 
 `sudo pip install -r requirements.txt`
