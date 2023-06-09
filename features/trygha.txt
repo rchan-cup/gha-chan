@@ -19,3 +19,4 @@ downgrade numpy
 trying unit test for now
 remove testing pipeline
 huhu
+run alll
