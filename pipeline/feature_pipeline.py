@@ -3,7 +3,7 @@ import pandas as pd
 from features import ip_features as ipf
 
 
-def connect(host: str, project : str) #-> hsfs.Connection.connection:
+def connect(host: str, project : str): #-> hsfs.Connection.connection:
     print("Connecting....")
     #connection = hsfs.connection(
         #host=host,
