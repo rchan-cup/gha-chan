@@ -9,7 +9,7 @@ class HsfsTest(TestCase):
         #self._connection = 
         feature_pipeline.connect(host="791bb4a0-bb1c-11ec-8721-7bd8cdac0b54.cloud.hopsworks.ai",project="dev")
         #self._fs = self._connection.get_feature_store()
-        #df = feature_pipeline.read_data("sample-click-logs.csv")
+        df = feature_pipeline.read_data("sample-click-logs.csv")
         #df = 
         feature_pipeline.engineer_features(df)
        # try:
