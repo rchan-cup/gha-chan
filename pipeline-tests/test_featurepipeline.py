@@ -1,5 +1,5 @@
 #from pipeline import feature_pipeline
-#from unittest import TestCase
+from unittest import TestCase
 import pytest
 
 class HsfsTest(TestCase):
