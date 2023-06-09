@@ -1,6 +1,6 @@
 {
     "python.testing.pytestArgs": [
-        "unit-tests"
+        "unit-tests", "pipeline-tests","notebook-tests"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true
