@@ -8,7 +8,7 @@ tried pytest . --cov=.
 nbformat not found
 nbconvert not found-
 REMOVING NOTEBOOKTEST FOR NOW
-aaaaaarrrghhhH!
+aaaaaarrrghhhH!-
 specify few folders for coverage--
 renamed tests
 is this really is it is it?
