@@ -8,3 +8,4 @@ tried pytest . --cov=.
 nbformat not found
 nbconvert not found
 REMOVING NOTEBOOKTEST FOR NOW
+aaaaaarrrghhhH!
