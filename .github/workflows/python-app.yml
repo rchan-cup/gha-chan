@@ -65,33 +65,44 @@ jobs:
         hide-report: true
         
 
-    - name: Check the output coverage
-      run: |
-        echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
-        echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
-        echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
-        echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
+    #- name: Check the output coverage
+     # run: |
+      #  echo "Coverage Percantage - ${{ steps.coverageComment.outputs.coverage }}"
+       # echo "Coverage Color - ${{ steps.coverageComment.outputs.color }}"
+        #echo "Coverage Html - ${{ steps.coverageComment.outputs.coverageHtml }}"
+        #echo "Summary Report - ${{ steps.coverageComment.outputs.summaryReport }}"
 
-        echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
+       # echo "Coverage Warnings - ${{ steps.coverageComment.outputs.warnings }}"
 
-        echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
-        echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
-        echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
-        echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
-        echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
-        echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
+        #echo "Coverage Errors - ${{ steps.coverageComment.outputs.errors }}"
+        #echo "Coverage Failures - ${{ steps.coverageComment.outputs.failures }}"
+        #echo "Coverage Skipped - ${{ steps.coverageComment.outputs.skipped }}"
+        #echo "Coverage Tests - ${{ steps.coverageComment.outputs.tests }}"
+        #echo "Coverage Time - ${{ steps.coverageComment.outputs.time }}"
+        #echo "Not Success Test Info - ${{ steps.coverageComment.outputs.notSuccessTestInfo }}"
 
-    - name: update file and push to remote
-      run: |
-        echo "Test push commit to the remote in the workflow" >> test.txt
-        git config --global user.name "rchan-cup"
-        git config --global user.email "rose.chan@cambridge.org"
+    #- name: update file and push to remote
+     # run: |
+      #  echo "Test push commit to the remote in the workflow" >> test.txt
+       # git config --global user.name "rchan-cup"
+        #git config --global user.email "rose.chan@cambridge.org"
 
-        git add -A
-        git commit -m "Update test.txt"
+        #git add -A
+        #git commit -m "Update test.txt"
         
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    #- name: Push changes
+     # uses: ad-m/github-push-action@master
+      #with:
+       # github_token: ${{ secrets.PAT_SECRET }}
+        #branch: ${{ github.ref }}
+    - name: Update Readme with Coverage Html
+      if: ${{ github.ref == 'refs/heads/main' }}
+      run: |
+        sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.summary_report.outputs.content }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
+
+    - name: Commit & Push changes to Readme
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: actions-js/push@master
       with:
+        message: Update coverage on Readme
         github_token: ${{ secrets.PAT_SECRET }}
-        branch: ${{ github.ref }}
