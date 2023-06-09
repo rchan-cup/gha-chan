@@ -37,3 +37,4 @@ pytest coverage comment
 3
 4
 write to repo
+updated permissions in settings of actions
